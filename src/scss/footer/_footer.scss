@@ -1,0 +1,26 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    color: v.$medium-gray;
+    padding-block: 1.95rem;
+    text-align: center;
+    @include m.mobile{
+        padding-block: 1.4rem;
+    }
+    @include m.desktop{
+        padding: 2rem 0 0;
+    }
+    &__attribution{
+        @include m.tablet{
+            font-size: 1.2rem;
+        }
+        @include m.desktop{
+            font-size: 1.6rem;
+        }
+    }
+    &__link-frontendmentor,
+    &__link-profile{
+        font-weight: 700;
+    }
+}

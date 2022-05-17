@@ -1,0 +1,226 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header{
+    padding-block: 2rem;
+    width: 100vw;
+    @include m.desktop{
+        padding-block: 2.5rem;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        @include m.desktop{
+            align-items: center;
+        }
+        &__menu-collapsed{
+            background-color: lighten($color: v.$almost-white, $amount: 100%);
+            height: 100vh;
+            padding: 2rem;
+            position: fixed;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            transition: transform .3s ease-in-out;
+            width: 65%;
+            z-index: 10;
+            @include m.tablet{
+                width: 35%;
+            }
+            @include m.desktop{
+                height: 2.7rem;
+                left: -35rem;
+                padding: 0;
+                top: unset;
+            }
+        }
+    }
+}
+
+.navbar__menu{
+    @include m.desktop{
+        display: none;
+    }
+}
+
+.navbar__menu-collapsed[data-visible="true"]{
+    transform: translateX(0%);
+}
+
+.navbar__flex{
+    display: flex;
+    justify-content: flex-end;
+    @include m.desktop{
+        display: none;
+    }
+}
+
+.navbar__lists{
+    margin-top: 3rem;
+    @include m.desktop{
+        column-gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top: 0;
+    }
+    .navbar__list-features,
+    .navbar__list-company,
+    .navbar__list{
+        line-height: 2.7rem;
+        list-style: none;
+        @include m.desktop{
+            height: 2.7rem;
+            padding-block: 0;
+        }
+    }
+    .navbar__button{
+        align-items: center;
+        background-color: lighten($color: v.$almost-white, $amount: 100%);
+        border: none;
+        color: v.$medium-gray;
+        display: flex;
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        &:hover{
+            @include m.desktop{
+                color: v.$almost-black;
+                cursor: pointer;
+            }
+        }
+        @include m.desktop{
+            line-height: 2.7rem;
+            margin-inline: auto;
+            padding: 0;
+            &#company{
+                margin-inline: 0;
+            }
+        }
+    }
+}
+
+.navbar__sub-lists-dropdown-features,
+.navbar__sub-lists-dropdown-company{
+    margin-top: 1.5rem;
+}
+
+.navbar__sub-lists-dropdown-features{
+    @include m.desktop{
+        transform: translateX(-3.5rem);
+        width: 17rem;
+    }
+}
+
+.navbar__sub-lists-dropdown-company{
+    @include m.desktop{
+        width: 14rem;
+    }
+}
+
+.navbar__sub-lists-features{
+    @include m.desktop{
+        margin-top: -20rem;
+    }
+}
+
+.navbar__list{
+    padding: 1rem 0;
+    @include m.desktop{
+        display: flex;
+        justify-content: center;
+        padding: 0 auto;
+    }
+}
+.navbar__link{
+    color: v.$medium-gray;
+    font-size: 1.6rem;
+    &:hover{
+        @include m.desktop{
+            color: v.$almost-black;
+            cursor: pointer;
+        }
+    }
+}
+
+.navbar__arrow-down-img{
+    width: 1rem;
+}
+
+.navbar__arrow-downF,
+.navbar__arrow-upF,
+.navbar__arrow-downC,
+.navbar__arrow-upC{
+    padding-left: 2rem;
+    width: 3rem;
+}
+
+.navbar__sub-lists-features,
+.navbar__sub-lists-company{
+    height: 0;
+    margin-top: 1rem;
+    opacity: 0;
+    padding-left: 2.5rem;
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+    @include m.desktop{
+        border-radius: 1rem;
+        box-shadow: 0 2px 15px 0 rgb(0 0 0 / 30%);
+        padding: 1.5rem 2rem;
+        width: 100%;
+    }
+    &[data-visible="true"]{
+        height: 100%;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    .navbar__sub-list{
+        align-items: center;
+        column-gap: 1.5rem;
+        display: flex;
+        list-style: none;
+        margin-bottom: 2.5rem;
+        @include m.desktop{
+            margin-bottom: 1rem;
+        }
+        .navbar__sub-link{
+            color: v.$medium-gray;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.navbar__sub-list-figure{
+    height: 1.6rem;
+    width: 1.6rem;
+    .navbar__sub-list-img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.navbar__login-register{
+    display: none;
+    @include m.desktop{
+        align-items: center;
+        column-gap: 3rem;
+        display: flex;
+    }
+    .navbar__login,
+    .navbar__register{
+        color: v.$medium-gray;
+        font-size: 1.6rem;
+    }
+    .navbar__login:hover{
+        color: v.$almost-black;
+    }
+}
+
+.navbar__register{
+    border: 0.2rem v.$medium-gray solid;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    transition: all ease .3s;
+    &:hover{
+        border-color: v.$almost-black; 
+        color: v.$almost-black;
+    }
+}

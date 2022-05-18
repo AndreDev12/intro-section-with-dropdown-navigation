@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/AndreDev12/intro-section-with-dropdown-navigation)
-- Live Site URL: [Vercel]()
+- Live Site URL: [Vercel](https://intro-section-with-dropdown-navigation-puce.vercel.app/)
 
 ## My process
 

@@ -37,7 +37,7 @@ function images(){
 
 function versionWebp(){
 	return src('src/assets/images/*.png')
-			.pipe(webp({quality:50}))
+			.pipe(webp({quality: 50}))
 			.pipe(dest('build/img'))
 }
 
@@ -52,4 +52,4 @@ exports.buildScripts = buildScripts;
 exports.dev = dev;
 exports.images = images;
 exports.versionWebp = versionWebp;
-exports.default = series(images, versionWebp, buildStyles, buildScripts ,dev);
+exports.default = series(images, versionWebp, buildStyles, buildScripts, dev);

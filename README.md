@@ -22,10 +22,10 @@ Users should be able to:
 - View the optimal layout for the content depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
-![](./src/assets/images/Screenshot%20Frontend%20Mentor%20Intro%20section%20with%20dropdown%20navigation%20desktop.png)
 ![](./src/assets/images/Screenshot%20Frontend%20Mentor%20Intro%20section%20with%20dropdown%20navigation%20mobile.png)
+![](./src/assets/images/Screenshot%20Frontend%20Mentor%20Intro%20section%20with%20dropdown%20navigation%20desktop.png)
 
 ### Links
 

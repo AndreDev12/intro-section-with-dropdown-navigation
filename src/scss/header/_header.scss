@@ -28,6 +28,7 @@
                 width: 35%;
             }
             @include m.desktop{
+                background-color: unset;
                 height: 2.7rem;
                 left: -35rem;
                 padding: 0;
@@ -83,6 +84,9 @@
     display: flex;
     font-size: 1.6rem;
     padding: 1rem 0;
+    @include m.desktop{
+        background-color: unset;
+    }
     &:hover{
         @include m.desktop{
             color: v.$almost-black;

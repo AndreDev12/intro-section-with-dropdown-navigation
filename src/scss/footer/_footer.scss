@@ -3,12 +3,15 @@
 
 .footer{
     color: v.$medium-gray;
+    margin-top: 12rem;
     padding-block: 1.95rem;
     text-align: center;
     @include m.mobile{
+        margin-top: 8rem;
         padding-block: 1.4rem;
     }
     @include m.desktop{
+        margin-top: 17rem;
         padding: 2rem 0 0;
     }
     &__attribution{
